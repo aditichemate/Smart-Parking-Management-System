@@ -1,42 +1,24 @@
-START
 
-  ↓
-Initialize Head = NULL
+flowchart TD
+    A([START]) --> B[Initialize Head = NULL]
+    B --> C[Display Main Menu]
+    C --> D[Enter Choice]
 
-  ↓
-Display Menu
+    D --> E{Select Operation}
 
-  ↓
-Enter Choice
+    E -->|1. Add Vehicle| F[Enter Vehicle Details]
+    F --> G[Add Vehicle to Linked List]
+    G --> C
 
-  ↓
- ┌───────────────┐
- 1. Add Vehicle
- 
- 2. Remove   
-   
- 3. Search   
-   
- 4. Display
-  
- 5. Exit  
-      │
- └──────
-  ↓
-Perform Selected Operation
+    E -->|2. Remove Vehicle| H[Enter Vehicle Number]
+    H --> I[Remove Vehicle from Linked List]
+    I --> C
 
-  ↓
-Display Result
+    E -->|3. Search Vehicle| J[Enter Vehicle Number]
+    J --> K[Search Vehicle in Linked List]
+    K --> C
 
-  ↓
-Choice = 5?
+    E -->|4. Display Vehicles| L[Display All Parked Vehicles]
+    L --> C
 
-  ↓ No
-Display Menu Again
-
-  ↓
- Yes
-
-  ↓
-STOP
-
+    E -->|5. Exit| M([STOP])

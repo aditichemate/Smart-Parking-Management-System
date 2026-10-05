@@ -21,7 +21,7 @@ Enter Choice
   
  5. Exit  
       │
- └───────────────┘
+ └──────
   ↓
 Perform Selected Operation
 

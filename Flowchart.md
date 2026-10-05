@@ -1,10 +1,14 @@
 START
+
   ↓
 Initialize Head = NULL
+
   ↓
 Display Menu
+
   ↓
 Enter Choice
+
   ↓
  ┌───────────────┐
  │ 1. Add Vehicle │

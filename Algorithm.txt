@@ -1,21 +1,23 @@
-Algorithm:
-1. Start the program.
 
-2. Initialize the parking list.
 
-3. Display the menu.
+Step 1: Start the program.
 
-4. Enter the user's choice.
+Step 2: Initialize the linked list with Head = NULL.
 
-5. Add vehicle details to the list.
+Step 3: Display the main menu.
 
-6. Remove a vehicle when it leaves.
+Step 4: Accept the user's choice.
 
-7. Search for a vehicle using its number.
+Step 5: If the choice is 1, enter vehicle details and add the vehicle to the linked list.
 
-8. Display all parked vehicles.
+Step 6: If the choice is 2, enter the vehicle number and remove the vehicle from the linked list.
 
-9. Repeat the menu until the user selects Exit.
+Step 7: If the choice is 3, enter the vehicle number and search for the vehicle.
 
-10. Stop the program.
+Step 8: If the choice is 4, display all parked vehicles.
 
+Step 9: If the choice is 5, exit the program.
+
+Step 10: Repeat Steps 3–9 until the user selects Exit.
+
+Step 11: Stop the program.

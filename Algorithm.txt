@@ -1,11 +1,21 @@
 Algorithm:
 1. Start the program.
+
 2. Initialize the parking list.
+
 3. Display the menu.
+
 4. Enter the user's choice.
+
 5. Add vehicle details to the list.
+
 6. Remove a vehicle when it leaves.
+
 7. Search for a vehicle using its number.
+
 8. Display all parked vehicles.
+
 9. Repeat the menu until the user selects Exit.
+
 10. Stop the program.
+

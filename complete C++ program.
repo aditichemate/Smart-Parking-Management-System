@@ -1,1 +1,111 @@
+#include <iostream>
+#include <string>
+using namespace std;
 
+struct Node {
+    string number;
+    Node* next;
+};
+
+Node* head = NULL;
+
+void addVehicle() {
+    Node* temp = new Node;
+    cout << "Enter vehicle number: ";
+    cin >> temp->number;
+    temp->next = NULL;
+
+    if (head == NULL) {
+        head = temp;
+    } else {
+        Node* p = head;
+        while (p->next != NULL)
+            p = p->next;
+        p->next = temp;
+    }
+    cout << "Vehicle added successfully!\n";
+}
+
+void removeVehicle() {
+    string num;
+    cout << "Enter vehicle number to remove: ";
+    cin >> num;
+
+    Node* p = head;
+    Node* prev = NULL;
+
+    while (p != NULL && p->number != num) {
+        prev = p;
+        p = p->next;
+    }
+
+    if (p == NULL) {
+        cout << "Vehicle not found!\n";
+        return;
+    }
+
+    if (prev == NULL)
+        head = p->next;
+    else
+        prev->next = p->next;
+
+    delete p;
+    cout << "Vehicle removed successfully!\n";
+}
+
+void searchVehicle() {
+    string num;
+    cout << "Enter vehicle number to search: ";
+    cin >> num;
+
+    Node* p = head;
+    while (p != NULL) {
+        if (p->number == num) {
+            cout << "Vehicle found in parking!\n";
+            return;
+        }
+        p = p->next;
+    }
+    cout << "Vehicle not found!\n";
+}
+
+void displayVehicles() {
+    Node* p = head;
+
+    if (p == NULL) {
+        cout << "Parking area is empty!\n";
+        return;
+    }
+
+    cout << "Parked Vehicles:\n";
+    while (p != NULL) {
+        cout << p->number << endl;
+        p = p->next;
+    }
+}
+
+int main() {
+    int choice;
+
+    do {
+        cout << "\n--- SMART PARKING SYSTEM ---\n";
+        cout << "1. Add Vehicle\n";
+        cout << "2. Remove Vehicle\n";
+        cout << "3. Search Vehicle\n";
+        cout << "4. Display Vehicles\n";
+        cout << "5. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1: addVehicle(); break;
+            case 2: removeVehicle(); break;
+            case 3: searchVehicle(); break;
+            case 4: displayVehicles(); break;
+            case 5: cout << "Program ended.\n"; break;
+            default: cout << "Invalid choice!\n";
+        }
+    } while (choice != 5);
+
+    return 0;
+}
